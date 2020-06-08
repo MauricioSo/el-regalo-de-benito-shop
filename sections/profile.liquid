@@ -1,0 +1,38 @@
+<div>
+    <h3>{{section.settings.header_title}}</h3>
+    <img src={{section.settings.user_img | img_url: '300x300'}} />
+    <p>{{section.settings.user_name}}</p>
+</div>
+
+
+
+{% schema %}
+
+{ 
+    "name": "Slideshow",
+    "settings": [{
+        "id": "header_title",
+        "type": "text",
+        "label": "Profile settings"
+    },
+    {
+        "type": "image_picker",
+        "id": "user_img",
+        "label": "User Photo"
+    },
+    {
+        "type": "text",
+        "id": "user_name",
+        "label": "User Name"
+    }
+    ],
+    "presets": [
+        {
+            "category": "custom content",
+            "name": "text"
+        }
+    ]
+}
+
+
+{% endschema %}
